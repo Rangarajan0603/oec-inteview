@@ -6,6 +6,7 @@ public class PlanProcedure : IChangeTrackable
 {
     public int ProcedureId { get; set; }
     public int PlanId { get; set; }
+    public ICollection<User> Users { get; set; } = new List<User>();
     public virtual Procedure Procedure { get; set; }
     public virtual Plan Plan { get; set; }
     public DateTime CreateDate { get; set; }
